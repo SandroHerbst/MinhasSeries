@@ -5,14 +5,13 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
+import Genres from './Genres'
 
 const Home = () => {
   return <h1>Home</h1>
 }
 
-const Genres = () => {
-  return <h1>Generos</h1>
-}
+
 
 function App() {
   const [data, setData] = useState({})
