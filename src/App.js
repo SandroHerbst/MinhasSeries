@@ -6,6 +6,8 @@ import {
   Route
 } from 'react-router-dom'
 import Genres from './Genres'
+import NewGenre from './NewGenre'
+import EditGenre from './EditGenre'
 
 const Home = () => {
   return <h1>Home</h1>
@@ -25,7 +27,9 @@ function App() {
       <div>
         <Header />
         <Route path='/' exact component={Home}/>
-        <Route path='/genres' component={Genres}/>
+        <Route path='/genres' exact component={Genres}/>
+        <Route path='/genres/new' exact component={NewGenre}/>
+        <Route path='/genres/:id' exact component={EditGenre}/>
         <pre>{JSON.stringify(data)}</pre>
       </div>
     </Router>
