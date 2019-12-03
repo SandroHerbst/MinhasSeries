@@ -15,7 +15,6 @@ const NewSerie = () => {
             .get('/api/genres')
             .then(res => {
                 setGenres(res.data.data)
-                const genres = res.data.data
             })
     }, [])
 
@@ -36,7 +35,7 @@ const NewSerie = () => {
             [field]: evt.target.value
         })
     }
-    
+
     const save = () => {
         axios.post('/api/series',{
             ...form,
